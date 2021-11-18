@@ -1,7 +1,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
   Helvetica, Roboto, Arial, sans-serif;
-  color: blue;
+  color: goldenrod;
 }
 
 .App {
@@ -20,13 +20,14 @@ hr {
 
 button {
   margin-right: 10px;
-  background: #3f51b5;
+  background: goldenrod;
   color: white;
   border: none;
   padding: 5px 10px;
   width: 100px;
   cursor: pointer;
-  box-shadow: 2px 2px 2px 1px #ccc;
+  font-size: 18px;
+  /* box-shadow: 2px 2px 2px 1px #ccc; */
 }
 
 /* For pdf */
@@ -55,20 +56,57 @@ button {
   overflow: auto;
 }
 
-#mySidenav a {
-  position: absolute; /* Position them relative to the browser window */
-  left: -80px; /* Position them outside of the screen */
-  transition: 0.3s; /* Add transition on hover */
-  padding: 15px; /* 15px padding */
-  width: 100px; /* Set a specific width */
-  text-decoration: none; /* Remove underline */
-  font-size: 20px; /* Increase font size */
-  color: white; /* White text color */
-  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-#mySidenav a:hover {
-  left: 0; /* On mouse-over, make the elements appear as they should */
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover,/* .dropdown-btn:hover,*/ .charactersheet:hover {
+  color: goldenrod;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  /* display: none; */
+  background-color: #262626;
+  padding-left: 20px;
 }
 
 /* The about link: 20px from the top with a green background */
@@ -87,19 +125,13 @@ button {
   background-color: #f44336; /* Red */
 }
 
-/* .flex-container {
-  display: flex;
+#title {
+  font-size:xx-large;
+  color: goldenrod;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.flex-child {
-  flex: 1;
-  border: 2px solid goldenrod;
+.charactersheet {
+  color: white;
+  background-color: #262626;
 }
-
-.flex-child menu {
-  fill: green;
-}
-
-.flex-child:first-child {
-  margin-right: 20px;
-}  */

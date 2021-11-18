@@ -4,7 +4,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
   template: "./client/index.html", 
   filename: "./index.html"
 });
-
+// "./client/index.js"
 module.exports = {
   entry: "./client/index.js",
   output: { // NEW
