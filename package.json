@@ -1,11 +1,11 @@
 {
-  "name": "solo-project",
+  "name": "one-stop-table-top",
   "version": "1.0.0",
   "description": "character sheet crud",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
-    "dev": "webpack --mode development && node server/index.js",
+    "start": "node server/server.js",
+    "dev": "webpack serve --open",
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,7 +22,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-pdf": "^5.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -32,10 +33,12 @@
     "css-loader": "^6.5.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "mongoose": "^6.0.13",
     "node-sass": "^6.0.1",
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.64.1",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
   }
 }
